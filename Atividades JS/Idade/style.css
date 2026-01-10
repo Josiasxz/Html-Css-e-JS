@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(8, 121, 250);
+    font: 15px normal Arial;
+    text-align: center;
+}
+
+h1{
+    color: white;
+}
+
+#sec{
+    width: 500px;
+    height: 200px;
+    padding: 40px;
+    margin: auto;
+
+    background-color: white;
+    font: 20px normal Arial;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+}
+
+.container{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+p{
+    text-align: center;
+    padding-top: 50px;
+}

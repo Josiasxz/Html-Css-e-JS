@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador</title>
+</head>
+<body>
+    <h1>Somador de valores</h1>
+    <input type="number" name="txt1" id="txt1">
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" id="somaBtn">
+    
+    <script>
+        var somaBtn = window.document.getElementById('somaBtn')
+        var n1 = window.document.getElementById('txt1')
+        var n2 = window.document.getElementById('txt2')
+        var soma = n1 + n2
+        addEventListener('onclick', clickBtn)
+
+        function clickBtn(){
+            document.write('A soma dos valores é: ' + soma)
+        }
+    </script>
+</body>
+</html>
