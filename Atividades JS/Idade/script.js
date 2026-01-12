@@ -1,6 +1,7 @@
 function calcRes()
 {
-    var age = document.querySelector('#age')
+    var input = document.getElementById('age')
+    var age = input.value;
 
     //Elementos
     var result = window.document.getElementById('res')  
@@ -8,23 +9,30 @@ function calcRes()
     var checkFem = window.document.getElementById('fem')
     var sex = 'indefinido'
     
-    // Verificação de idade
-    if (age > 2026 || age < 1875)
-        result.innerHTML = `<strong>[ERRO]</strong> Ano ${age} invalido! `
-    
     // Verificação de sexo
     if (checkMas.checked)
     {
-        sex = 'Masculino'
+        sex = 'Homem'
     }
     else if (checkFem.checked)
     {
-        sex = 'Feminino'
+        sex = 'Mulher'
     }
     else
     {
-        result.innerHTML = '<strong>[ERRO]</strong> Não foi definido sexo!'
+        result.innerHTML = '<strong>[ERRO]</strong> Não foi definido o sexo!'
     }
 
-    
+    if (sex == 'Homem' && age > 2026 || age < 1875)
+    {
+        result.innerHTML = `Detectamos um ${sex} de ${2026 - age} anos.`
+    }
+    else if (sex == 'Mulher' && age > 2026 || age < 1875)
+    {
+        result.innerHTML = `Detectamos um ${sex} de ${2026 - age} anos.`
+    }
+    else
+    {
+        result.innerHTML = '<strong>[ERRO]</strong> A idade definida foi invalida'
+    }
 }
