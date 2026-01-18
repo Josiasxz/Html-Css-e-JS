@@ -10,4 +10,8 @@ const pessoa = {
     }
 }
 
+pessoa["nome"] = "Julio"
 pessoa.info() // Chamada da função/ metodo do objeto "pessoa"
+//Ou
+pessoa.nome = "Carlos"
+pessoa.info()
