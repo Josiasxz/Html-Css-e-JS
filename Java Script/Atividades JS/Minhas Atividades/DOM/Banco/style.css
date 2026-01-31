@@ -1,6 +1,6 @@
 body{
-    background-color: rgb(0, 162, 202);
-    color: white;
+    background: radial-gradient(circle, green, rgb(0, 105, 0));
+    color: rgb(189, 255, 183);
     padding: 10px;
     text-align: center;
 
@@ -43,7 +43,7 @@ body{
 }
 
 .buttonActivate{
-    background-color: rgb(0, 197, 211);
+    background-color: rgb(0, 99, 5);
     color: white;
 }
 
@@ -66,4 +66,9 @@ body{
     font-size: 25px;
     padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Aviso{
+    font-size: 12px;
+    color: red;
 }
