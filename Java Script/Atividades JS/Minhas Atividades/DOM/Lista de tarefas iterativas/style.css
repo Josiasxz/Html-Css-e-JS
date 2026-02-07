@@ -2,6 +2,7 @@ body{
     background: radial-gradient(circle, rgb(231, 0, 231), purple);
     font: 16px normal Arial;
     text-align: center;
+    padding: 5px;
     
 }
 
@@ -9,10 +10,11 @@ body{
 .title{
     color: rgba(255, 255, 255, 0.808);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: scale 0.5s ease;
 }
 .title:hover{
     color: white;
-    transform: scale(1.01, 1.01);
+    scale: 1.01;
     cursor:default;
 }
 
@@ -23,14 +25,20 @@ body{
     border-radius: 20px;
     border: 5px solid rgb(168, 63, 168);
     box-shadow: 5px 5px 5px rgba(58, 0, 58, 0.562);
+    animation: animaGradiente 5s ease infinite;
 
     padding: 10px;
     margin: 0 auto;
     width: 400px;
     height: 100px;
-    transition: background-color 0.3s ease;
+    overflow: auto;
     background-size: 300% 300%;
-    animation: animaGradiente 5s ease infinite;
+    
+    display: flex;
+    flex-direction: column; /* Faz com que os grupos fiquem um embaixo do outro */
+    gap: 20px; /* Espaço entre os grupos */
+    /* Opcional: define uma largura */
+    
 }
 
 @keyframes animaGradiente {
@@ -38,5 +46,141 @@ body{
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+.group{
+    display: flex;
+    flex-direction: column; /* Faz os itens dentro do grupo ficarem um embaixo do outro */
+    
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Lista */
+
+.list{
+    list-style:disc;
+    margin: 0;
+    display: flex;
+}
+
+/* Item */
+.item{
+    color: white;
+    transition: scale 0.2s ease;
+}
+
+.item:hover{
+    scale: 1.05;
+    cursor: default;
+}
+
+.item::marker{
+    color: rgb(174, 0, 255);
+}
+
+.itemConclude{
+    color: green;
+    list-style-type: none;
+
+    background-image: url('img/checkBox.png');
+    background-repeat: no-repeat;
+    background-position: left center; /* Posiciona o ícone */
+    padding-left: 30px; /* Espaço para o ícone não cobrir o texto */
+    background-size: 20px;
+}
+
+/* Botões */
+
+.buttons{
+    color: white;
+    box-shadow: 3px 3px 3px rgba(59, 0, 59, 0.555);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    width: 75px;
+    
+    
+    transition: scale 0.2s ease;
+    transition: background-color 0.3s;
+}
+
+/* Botão de excluir */
+#excludeBtn{
+    background-color: red;
+    right: 260px;
+}
+
+#excludeBtn:hover{
+    scale: 1.05;
+    background-color: rgb(160, 0, 0);
+}
+
+/* Botão de concluir*/
+#concludeBtn{
+    background-color: green;
+    right: 350px;
+}
+
+#concludeBtn:hover{
+    scale: 1.05;
+    background-color: rgb(0, 95, 0);
+}
+
+/* Input para tarefas */
+
+.containerIn{
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.425);
+
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    height: 75px;
+
+    position: fixed;
+    left: 225px;
+    top: 250px;
+}
+
+/* Botão de criar */
+#createBtn{
+    background-color: rgb(0, 247, 255);
+
+    position: fixed;
+    left: 350px;
+    top: 325px;
+}
+
+#createBtn:hover{
+    background-color: rgb(0, 135, 139);
+    scale: 1.05;
+    
+}
+
+/* Input para criar tarefa */
+
+#inputTarefa{
+    background-color: rgba(255, 180, 255, 0.493);
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.521);
+    font-size: 10px;
+
+
+    padding: 5px;
+    height: 10px;
+    width: 200px; 
+    
+    transition: scale 0.3s ease;
+}
+
+#inputTarefa:hover{
+    scale: 1.05;
+}
+
+
+
 
 
