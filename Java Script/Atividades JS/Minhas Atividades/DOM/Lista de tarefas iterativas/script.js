@@ -3,8 +3,9 @@ const textIn = document.querySelector('#inputTarefa');
 const createBtn = document.querySelector('#createBtn');
 
 const List = document.querySelector('.list');
+let listIds = [];
 
-const date = new Date()
+const date = new Date();
 
 const Tasks = {
     
@@ -15,9 +16,7 @@ const Tasks = {
     AddTask: function()
     {
         
-        this.taskList.push({task: textIn.value, conclude: false, id: 0})
-        const theTask = this.taskList[this.taskList.length - 1]
-        theTask.id = this.taskList.length - 1
+        this.taskList.push({task: textIn.value, conclude: false, id: listIds.length})
         return this.taskList.at(-1)
     },
 
@@ -53,9 +52,13 @@ function configureBtn(button, buttonType)
 // Cria e configura as tasks
 function createTasks(Task)
 {
+    const idTask = listIds.length
+    listIds.push(idTask)
+
     // Cria a div filha que vai comportar o elemento
     const newDiv = document.createElement('div')
     newDiv.classList.add("group")
+    newDiv.setAttribute('id', idTask)
     List.append(newDiv)
 
     // Cria a nova lista
@@ -88,13 +91,17 @@ function createTasks(Task)
     
 }
 
-function concludeTask()
+function concludeTask(buttonGroup)
 {
-    
+
 }
 
 createBtn.addEventListener('click', () => {
     const newTask = Tasks.AddTask() // Pega o valor da task adicionada
     
     createTasks(newTask) // Cria as tasks
+})
+
+newConcluirBtn.addEventListener('click', () => {
+    console.log("TaskConcluida")
 })
