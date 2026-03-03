@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web&display=swap');
+
+/* Body */
+body{
+
+    background: radial-gradient(circle, #6656fc, #473aba);
+    padding: 8px;
+    
+}
+
+/* Header */
+
+header#cabecalho {
+
+    font-family: 'Rubik', sans-serif;
+    padding: 16px;
+    position: relative;
+
+}
+
+header#cabecalho h1{
+
+    position: relative;
+    top: 100px;
+    cursor: default;
+
+    text-align: center;
+    font-size: 50pt;
+    
+    color: rgba(255, 255, 255, 0.568);
+    text-shadow: 2px 2px 1px #0e0c2481;
+
+    transition: scale 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+header#cabecalho h1:hover{
+    scale: 1.01;
+    color: white;
+}
+
+/* Menu */
+
+header#cabecalho nav{
+
+    position: absolute;
+    top: 0px;
+    right: 90px;
+
+    padding: 8px;
+}
+
+header#cabecalho ul{
+
+    display: flex;
+    
+}
+
+header#cabecalho li{
+
+    padding: 8px;
+    margin-left: 32px;
+    
+    font-size: 16pt;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    list-style: none;
+    background-color: #30287357;
+
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    border: 2px solid white;
+
+    transition: color 0.5s ease, background-color 0.5s ease, scale 0.5s ease, boder-color 0.5s ease;
+    
+    
+}
+
+header#cabecalho li:hover{
+
+    color: #302873;
+    background-color: #6656fc;
+    border-color: #292552;
+    scale: 1.1;
+    cursor:pointer;
+    
+}
