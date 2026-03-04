@@ -42,7 +42,7 @@ header#cabecalho h1:hover{
 
 /* Menu */
 
-header#cabecalho nav{
+header#cabecalho nav#main-nav{
 
     position: absolute;
     top: 0px;
@@ -87,3 +87,44 @@ header#cabecalho li:hover{
     cursor:pointer;
     
 }
+
+/* Redes sociais */
+
+header#cabecalho nav#redes-sociais {
+
+    position: absolute;
+    top: 0px;
+    left: -20px;
+
+    padding: 8px;
+
+}
+
+header#cabecalho nav#redes-sociais li{
+
+    border-radius: 200px;
+    overflow: hidden;
+    margin-left: 8px;
+
+}
+
+header#cabecalho nav#redes-sociais li#GitHub{
+
+    background-image: url(.imagens/GitHub_ico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+
+}
+
+header#cabecalho nav#redes-sociais li#Facebook{
+
+    background-image: url(.imagens/Facebook_iconewebp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+
+}
+
