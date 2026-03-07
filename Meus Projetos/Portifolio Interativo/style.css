@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
 /* Body */
 body{
@@ -13,22 +14,40 @@ body{
 
 header#cabecalho {
 
-    font-family: 'Rubik', sans-serif;
-    padding: 16px;
-    position: relative;
+    position: fixed;
+    margin: 0px;
+    top: -10px;
+    left: -10px;
 
+    border: 10px solid #43399994;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438);
+    padding: 16px;
+    position: fixed;
+    width: 100%;
+
+    transition: scale 0.3s ease;
+
+    background-color: rgba(255, 255, 255, 0.144);
+
+}
+header#cabecalho:hover{
+    scale: 1.02;
 }
 
 header#cabecalho h1{
 
     position: relative;
-    top: 100px;
+    top: -10px;
+    left: 40px;
+    margin-bottom: 0px;
+    
     cursor: default;
 
-    text-align: center;
-    font-size: 50pt;
+    text-align: left;
+    font-size: 30pt;
     
-    color: rgba(255, 255, 255, 0.568);
+    color: rgba(255, 255, 255, 0.685);
     text-shadow: 2px 2px 1px #0e0c2481;
 
     transition: scale 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -40,13 +59,43 @@ header#cabecalho h1:hover{
     color: white;
 }
 
+header#cabecalho span#textoInterativo{
+    color: rgba(255, 255, 255, 0.767);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.514);
+
+    margin-top: 0px;
+    font-size: 20pt;
+    
+    position: relative;
+    left: 80px;
+
+    transition: color 0.3s ease;
+
+}
+
+header#cabecalho span#textoInterativo:hover{
+    color: white;
+}
+
+header#cabecalho span#textoInterativo::after{
+  content: "|";
+  margin-left: 5px;
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar{
+  0% {opacity:1;}
+  50% {opacity:0;}
+  100% {opacity:1;}
+}
+
 /* Menu */
 
 header#cabecalho nav#main-nav{
 
     position: absolute;
-    top: 0px;
-    right: 90px;
+    top: 32px;
+    margin-left: 32%;
 
     padding: 8px;
 }
@@ -60,9 +109,9 @@ header#cabecalho ul{
 header#cabecalho li{
 
     padding: 8px;
-    margin-left: 32px;
+    margin-left: 16px;
     
-    font-size: 16pt;
+    font-size: 12pt;
     text-align: center;
     color: rgb(255, 255, 255);
 
@@ -94,7 +143,7 @@ header#cabecalho nav#redes-sociais {
 
     position: absolute;
     top: 0px;
-    left: -20px;
+    right: 90px;
 
     padding: 8px;
 
@@ -104,7 +153,7 @@ header#cabecalho nav#redes-sociais li{
 
     border-radius: 200px;
     overflow: hidden;
-    margin-left: 8px;
+    margin-left: 16px;
 
 }
 
@@ -127,4 +176,91 @@ header#cabecalho nav#redes-sociais li#Facebook{
     height: 20px;
 
 }
+
+header#cabecalho nav#redes-sociais a{
+    opacity: 0;
+    font-size: 20pt;
+    position: relative;
+    top: -8px;
+}
+
+/* Principal */
+
+main#principal {
+    margin-left: 120px;
+    margin-right: 120px;
+
+    position: relative;
+    top: 200px;
+
+    display: flex;
+
+    background:linear-gradient(to right, rgba(255, 255, 255, 0.2), #6756fc6c);
+    padding: 16px;
+    border-radius: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    transition: scale 0.3s ease, background 0.3s ease;
+    
+}
+
+main#principal:hover{
+    scale: 1.02;
+    background:linear-gradient(to right, rgba(255, 255, 255, 0.308), #6756fc8a);
+}
+
+main#principal img{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.411);
+    
+    padding: 8px;
+    
+    transition: scale 0.3s ease;
+}
+
+main#principal img:hover{
+    scale: 1.02;
+}
+
+main#principal div#textbox{
+    display: none;
+}
+
+main#principal h2{
+    display: list-item;
+    margin-left: 40px;
+    margin-bottom: 0px;
+    font-size: 15pt;
+    cursor: default;
+
+}
+
+main#principal p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    
+}
+
+main#principal p#importante{
+    margin-top: 10px; 
+
+    font-size: 20pt;
+    transition: font-size 0.4s ease;
+}
+
+main#principal p#importante:hover{
+    font-size: 20.5pt;
+}
+
+main#principal p#adicional{
+    margin-top: 30px;
+    text-indent: 30px;
+}
+
 

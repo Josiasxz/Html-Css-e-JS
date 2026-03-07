@@ -130,6 +130,45 @@ section#corpo {
     padding-right: 15px;
 }
 
+table#tabelaspecs{
+    border: 1px #606060 solid;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table#tabelaspecs td{
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+table#tabelaspecs td.ce{
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspecs td.cd{
+    background-color: #cecece;
+    text-align: left;
+}   
+
+table#tabelaspecs caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#tabelaspecs caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
 aside#lateral {
     display: block;
     width: 350px;
