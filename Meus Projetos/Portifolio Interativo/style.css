@@ -18,6 +18,7 @@ header#cabecalho {
     margin: 0px;
     top: -10px;
     left: -10px;
+    z-index: 1000;
 
     border: 10px solid #43399994;
     font-family: 'Rubik', sans-serif;
@@ -28,7 +29,7 @@ header#cabecalho {
 
     transition: scale 0.3s ease;
 
-    background-color: rgba(255, 255, 255, 0.144);
+    background-color:#8f83ffb6;
 
 }
 header#cabecalho:hover{
@@ -68,6 +69,8 @@ header#cabecalho span#textoInterativo{
     
     position: relative;
     left: 80px;
+
+    cursor: default;
 
     transition: color 0.3s ease;
 
@@ -184,9 +187,9 @@ header#cabecalho nav#redes-sociais a{
     top: -8px;
 }
 
-/* Principal */
+/* Sobre */
 
-main#principal {
+section#sobre {
     margin-left: 120px;
     margin-right: 120px;
 
@@ -202,18 +205,20 @@ main#principal {
     font-family: 'Montserrat', sans-serif;
     color: white;
 
-    transition: scale 0.3s ease, background 0.3s ease;
+    transition: scale 0.3s ease;
     
 }
 
-main#principal:hover{
+section#sobre:hover{
     scale: 1.02;
     background:linear-gradient(to right, rgba(255, 255, 255, 0.308), #6756fc8a);
 }
 
-main#principal img{
+section#sobre img{
     width: 300px;
     height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
 
     border-radius: 30px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.411);
@@ -223,44 +228,169 @@ main#principal img{
     transition: scale 0.3s ease;
 }
 
-main#principal img:hover{
+section#sobre img:hover{
     scale: 1.02;
 }
 
-main#principal div#textbox{
+section#sobre div#textbox{
     display: none;
 }
 
-main#principal h2{
+section#sobre h2{
     display: list-item;
     margin-left: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 25px;
     font-size: 15pt;
     cursor: default;
 
 }
 
-main#principal p{
+section#sobre p{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 40px;
     
 }
 
-main#principal p#importante{
+section#sobre p#importante{
     margin-top: 10px; 
 
     font-size: 20pt;
     transition: font-size 0.4s ease;
+     cursor: default;
 }
 
-main#principal p#importante:hover{
+section#sobre p#importante:hover{
     font-size: 20.5pt;
 }
 
-main#principal p#adicional{
-    margin-top: 30px;
-    text-indent: 30px;
+section#sobre p#adicional{
+    margin-top: 16px;
+    font-size: 16pt;
+    color: rgba(255, 255, 255, 0.767);
 }
 
+/* Habilidades */
 
+section#habilidades{
+
+    margin-left: 120px;
+    margin-right: 120px;
+
+    position: relative;
+    top: 300px;
+
+    background:linear-gradient(to right, rgba(255, 255, 255, 0.2), #6756fc6c);
+    padding: 16px;
+    border-radius: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    transition: scale 0.3s ease;
+}
+
+section#habilidades:hover{
+
+    scale: 1.01;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.377), #6756fc9d);
+}
+
+section#habilidades h2{
+
+    position: relative;
+    text-align: center;
+
+    font-size: 25pt;
+    
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61);
+    color: rgba(255, 255, 255, 0.699);
+
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+section#habilidades h2:hover{
+
+    font-size: 27pt;
+    color: white;
+}
+
+/* Skills */
+
+section#habilidades div#skills{
+
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+    width: 90%;
+
+    display: flex;
+
+    background: linear-gradient(to right, #4c38fdce, #2c1dafb6);
+
+    border-radius: 30px;
+
+    transition: scale 0.3s ease;
+
+}
+
+section#habilidades div#skills:hover{
+
+    scale: 1.01;
+    background: linear-gradient(to right, #4c38fd, #2c1daf);
+}
+
+/* Skill */
+
+section#habilidades div#skills div.skill{
+
+    position: relative;
+
+    width: 32%;
+
+    margin: 1%;
+    padding: 16px;
+
+    background-color: #3329a8;
+    border: 2px solid #281f8b;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.603);
+
+    transition: 0.5s;
+
+}
+
+section#habilidades div#skills div.skill:hover{
+
+    transform:translateY(-8px);
+    scale: 1.1;
+
+}
+
+section#habilidades div#skills div.skill h3{
+
+    font-size: 18pt;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.829);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.664);
+
+    transition: 0.3s;
+}
+
+section#habilidades div#skills div.skill h3:hover{
+
+    font-size: 20pt;
+    color: white;
+}
+
+section#habilidades div#skills div.skill img{
+
+    width: 125px;
+    height: 125px;
+
+    border: 5px solid #6656fc;
+    border-radius: 40px;
+}
