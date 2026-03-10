@@ -27,13 +27,14 @@ header#cabecalho {
     position: fixed;
     width: 100%;
 
-    transition: scale 0.3s ease;
+    transition: 0.3s;
 
-    background-color:#8f83ffb6;
+    background-color:#8f83ffc9;
 
 }
 header#cabecalho:hover{
     scale: 1.02;
+     background-color:#8f83ff;
 }
 
 header#cabecalho h1{
@@ -306,6 +307,8 @@ section#habilidades h2{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61);
     color: rgba(255, 255, 255, 0.699);
 
+    cursor: default;
+
     transition: font-size 0.3s ease, color 0.3s ease;
 }
 
@@ -377,6 +380,8 @@ section#habilidades div#skills div.skill h3{
     color: rgba(255, 255, 255, 0.829);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.664);
 
+    cursor: default;
+
     transition: 0.3s;
 }
 
@@ -388,9 +393,17 @@ section#habilidades div#skills div.skill h3:hover{
 
 section#habilidades div#skills div.skill img{
 
-    width: 125px;
-    height: 125px;
+    width: 60px;
 
-    border: 5px solid #6656fc;
-    border-radius: 40px;
+    margin-left: 97px;
+    margin-top: -20px;
+    opacity: 0.8;
+
+    transition: 0.5s;
+}
+
+section#habilidades div#skills div.skill img:hover{
+
+    scale: 1.1;
+    opacity: 1;
 }
